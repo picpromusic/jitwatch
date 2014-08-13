@@ -43,7 +43,7 @@
 		</junit>
 	</target>
 
-	<target name="jar" depends="test">
+	<target name="jar" depends="compile">
 		<jar destfile="${target}/jitwatch-1.0.0-SNAPSHOT.jar">
 			<fileset dir="${classes}">
 				<include name="**/*.class" />
@@ -66,5 +66,5 @@
 		</java>
 	</target>
 
-	<target name="all" depends="jar" />
+	<target name="all" depends="jar,test" />
 </project>
